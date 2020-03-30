@@ -13,22 +13,26 @@
     />
     <link rel="stylesheet" href="static/css/style.css">
 </head>
-<body>
+<body class="bg-dark">
    <div class="wrapper">
-     <nav class="navbar navbar-expand-lg">
+
+     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
        <a class="navbar-brand" href="index.html">UFO Sightings</a>
      </nav>
+
      <div class="jumbotron">
-       <h1>The Truth Is Out There</h1>
+       <h1 class="display-4">The Truth Is Out There</h1>
      </div>
+
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-4 ">
-            <h2 ><strong>UFO Sightings:Fact or Fancy? </strong>
+
+          <div class="col-md-4">
+            <h2 ><strong>UFO Sightings: Fact or Fancy? </strong>
              <small class="text-truncate">Ufologists Weigh In</small></h2>
           </div>
-          <div class="col-md-8">
-            
+
+          <div class="col-md-8">            
             <p class="text-justify">
               Are we alone in the universe? For millennia, humans have turned to the sky to answer this question. 
               Now, thanks to research generously funded by W. Avy, a UFO-enthusiast and amateur ufologist, 
@@ -50,30 +54,49 @@
             </p>
             <p class="text-justify">
                So what do YOU think? Dig through the data yourself, and let us know what you see.
-             </p>
-             
+             </p>             
            </div>
+
         </div>
-       </div>
+     </div>
+
     <div class="container-fluid">
       <div class="row">
+
         <div class="col-md-3">
-          <form>
+          <form class="bg-dark">
            <p><strong>Filter Search</strong></p>
           </form>
-          <ul class="list-group">
-            <li class="list-group-item">
+          <ul class="list-group bg-dark">
+            <li class="list-group-item bg-info">
              <label for="date"><strong>Enter Date</strong></label>
-             <input type="text" placeholder="1/10/2010" id="datetime"/>
+             <input type="text" placeholder="1/10/2010" id="date"/>
             </li>
-            <li class="list-group-item">
-             <button id="filter-btn" type="button" class="btn btn-default"><strong>Filter Table</strong></button>
+            <li class="list-group-item bg-info">
+             <label for="city"><strong>Enter City</strong></label>
+             <input type="text" placeholder="benton" id="city"/>
+            </li>
+            <li class="list-group-item bg-info">
+             <label for="state"><strong>Enter State</strong></label>
+             <input type="text" placeholder="ar" id="state"/>
+            </li> 
+            <li class="list-group-item bg-info">
+             <label for="country"><strong>Enter Country</strong></label>
+             <input type="text" placeholder="us" id="country"/>
+            </li>
+            <li class="list-group-item bg-info">
+             <label for="shape"><strong>Enter Shape</strong></label>
+             <input type="text" placeholder="circle" id="shape"/>
+            </li>
+            <li class="list-group-item bg-info">
+             <button id="filter-btn" type="button" class="btn"><strong>Filter Table</strong></button>
             </li>
           </ul>   
         </div>
+
         <div class="col-md-9">
-         <table class="table table-striped">
-          <thead>
+         <table class="table table-striped table-bordered  table-hover">
+          <thead class="thead-dark">
            <tr>
             <th>Date</th>
             <th>City</th>
@@ -81,16 +104,24 @@
             <th>Country</th>
             <th>Shape</th>
             <th>Duration</th>
-            <th>Comments</th>
+            <th>Comments</th>            
            </tr>
           </thead>
           <tbody></tbody>
          </table>
         </div>
-      </div>
+
+     </div>
     </div>
-  </div>
-     
+
+    <div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+          <script src="static/js/data.js"></script>
+          <script src="static/js/app.js"></script>
+          <!--<script src="static/js/pseudoCode.js"></script>-->
+    </div>
+
+    </div>     
 </body>
 </html>
 
