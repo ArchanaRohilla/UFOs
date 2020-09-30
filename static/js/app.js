@@ -81,8 +81,8 @@ function filterTable() {
   // matches the filter values
    
   for (var key in filters) {    
-    
-    filter1 = filteredData.filter(row => row[key] === filters[key] );
+        
+        filter1 = filteredData.filter(row => row[key] === filters[key] );      
     
   filteredData = filter1;
   } 
